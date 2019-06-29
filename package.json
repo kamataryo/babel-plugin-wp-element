@@ -9,7 +9,8 @@
   "scripts": {
     "test": "ava",
     "e2e": "./e2e/test.sh",
-    "build": "tsc"
+    "build": "tsc",
+    "prepublish": "npm test && npm run build && npm run e2e"
   },
   "ava": {
     "compileEnhancements": false,
