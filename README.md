@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/kamataryo/babel-plugin-wp-element.svg?branch=master)](https://travis-ci.org/kamataryo/babel-plugin-wp-element)
 
-A babel plugin to convert `import React from 'react'` into `import React from '@wordpress/element'`.
+A babel plugin to convert the react import declaration for WordPress.
 
 ## Usage
 
