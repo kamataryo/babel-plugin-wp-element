@@ -23,7 +23,7 @@ test('react-dom to wp.element', async t => {
   const expected =
     'import { render } from "@wordpress/element";\nimport A from "a";'
   const result = await babel.transformAsync(from, {
-    plugins: [[wpElement, { reactify: false }]]
+    plugins: [[wpElement]]
   })
   const actual = (result || {}).code || ''
   t.is(actual, expected)

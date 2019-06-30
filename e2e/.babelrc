@@ -1,3 +1,4 @@
 {
-  "plugins": ["../dist/index.js"]
+  "presets": ["@babel/preset-env"],
+  "plugins": ["../dist/index.js", "@babel/plugin-transform-react-jsx"]
 }
