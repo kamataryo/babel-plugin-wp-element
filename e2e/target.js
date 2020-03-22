@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import { render } from 'react-dom'
 import jQyery from 'jquery'
+const React = require('react')
 
 class MyComponent extends React {
   /**

@@ -7,6 +7,11 @@ if [[ $RESULT != *"require(\"@wordpress/element\")"* ]]; then
   exit 1
 fi
 
+if [[ $RESULT == *"require(\"react\")"* ]]; then
+  echo 'failed: require("react") should not exist.'
+  exit 1
+fi
+
 if [[ $RESULT != *"require(\"jquery\")"* ]]; then
   echo 'failed: require("jquery") should exist.'
   exit 1

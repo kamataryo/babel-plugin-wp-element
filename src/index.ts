@@ -9,6 +9,16 @@ export default function() {
         if (source.value === 'react' || source.value === 'react-dom') {
           source.value = '@wordpress/element'
         }
+      },
+      CallExpression(path: Babel.NodePath<t.CallExpression>) {
+        const callee: any = path.node.callee
+        const args: any = path.node.arguments
+        if (
+          callee.name === 'require' &&
+          (args[0].value === 'react' || args[0].value === 'react-dom')
+        ) {
+          args[0].value = '@wordpress/element'
+        }
       }
     }
   }
